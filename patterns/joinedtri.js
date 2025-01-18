@@ -27,7 +27,17 @@
 // 	}
 // 	console.log(row);
 // }
-let N = 10;
-for (let i = 0; i <= N; i++) {
-	console.log(i);
-}
+// let arr = ["Adarsh", "Adarsh", "car", "name"];
+// for (i in arr) {
+// 	for (j in arr) {
+// 		if (i === j) {
+// 			continue;
+// 		} else {
+// 			if (arr[i] === arr[j]) {
+// 				arr.splice(arr[j], j);
+// 				console.log(arr);
+// 			}
+// 		}
+// 	}
+// }
+
