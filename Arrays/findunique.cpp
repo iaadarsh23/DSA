@@ -12,7 +12,6 @@ int findUnique(int arr[], int n) {
     }
     return ans;
 }
-
 int main() {
     int arr[8] = {11, 12, 12, 34, 56, 56, 34};
     int n = 8;
