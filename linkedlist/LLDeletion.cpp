@@ -111,6 +111,52 @@ void printLL(Node* head){
 }   
 
 
+//deletion of the lInkedLIst
+//deletion at head
+
+void delHead(Node* &head){
+    //create an new node temp
+    Node* temp = head;
+    //move head to next
+    head= temp->next;
+    //make the temp point to null
+    temp->next= NULL;
+    //del temp
+    delete temp;
+}
+
+
+void delTail(Node* &head, Node* &tail){
+    Node* prev= head;
+    //traverse through the ll
+    while(prev->next!=tail){
+        prev= prev->next;
+    }
+    //make the prev to null
+    prev->next = NULL;
+    //delete the tail
+
+    delete tail;
+    //make the tail to prev
+    tail= prev;
+}
+
+
+void delPos(Node* &head, int position){
+    Node* prev= NULL;
+    Node* curr= head;
+    int count =1;
+    while(count<position){
+        prev= curr;
+        curr = curr->next;
+        count++;
+    }
+    prev->next= curr->next;
+    curr->next = NULL;
+    delete curr;
+
+}
+
 
 int main()
 {   
@@ -145,6 +191,14 @@ int main()
     insertAtPos(head,tail,760,1);
     //insertatTail(tail,head,500);
     printLL(head);
-    getLength(head);
+    //getLength(head);
+    delHead(head);
+    printLL(head);
+    delTail(head, tail);
+    printLL(head);
+
+    delPos(head, 2);
+    cout << "deleted at pos" << endl;
+    printLL(head);
     return 0;
 }
